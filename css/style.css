@@ -1,0 +1,245 @@
+body {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+.bg{
+  background-color:#060606;
+}
+.bg-secondary{
+  background-color: white;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.site-navigation {
+  text-align: right;
+}
+
+.site-navigation li {
+  display: inline-block;
+  padding: 1.5rem 0;
+}
+.site-navigation li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.site-header {
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+.w-half {
+  width: calc(100%/2);
+}
+.w-4{
+  width: calc(100%/4);
+}
+.w-100{
+  width: 100%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-60 {
+  width: calc(30*2%);
+}
+.w-30{
+  width: 30%;
+}
+.w-33{
+    width: calc(100%/3);
+}
+.h-1{
+  height: 300px;
+}
+.push-left {
+  float: left;
+}
+.hero-section {
+  background-image: url("../images/bg.jpg");
+  background-position: 0%;
+  min-height: 100vh;
+}
+.hero-section .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button{
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+.display-block{
+  display: block;
+}
+.button-primary{
+  background-color: #ff1964;
+}
+.button-secondary{
+    border:1px solid white;
+    margin-top: 10px;
+    transition: .3s;
+}
+.hero-content p {
+  margin-bottom: 2rem;
+}
+.hero-content h1 {
+  font-size: 3.5rem;
+}
+.hero-content span {
+  font-size: 1.5rem;
+}
+
+
+
+
+.color-primary{
+  color: white;
+}
+.color-secondary{
+  color: #ff1964;
+}
+.section-header span{
+  font-size: 1rem;
+}
+.section-header h2 {
+  font-size: 3rem;
+}
+.section-header{
+  margin: 2rem 0;
+}
+.pad-1{
+  padding: 1rem;
+}
+.pad-2{
+  padding: 2rem;
+}
+.pad-half{
+  padding: .5rem;
+}
+.pad-2-half{
+  padding: 2.5rem;
+}
+.pad-lf-0{
+  padding-left: 0 !important;
+}
+.pad-dw-0{
+  padding-bottom: 0 !important;
+}
+.pad-tp-0{
+  padding-top: 0 !important;
+}
+.mar-rt-1{
+  margin-right: 1rem;
+}
+.mar-tp-2-half{
+  margin-top: 2.5rem;
+}
+.push-right{
+  text-align: end;
+}
+.mar-dw-0{
+  margin-bottom: 0 !important;
+}
+.mar-tp-dw-10{
+  margin: 10rem 0;
+}
+.mar-tp-dw-2{
+  margin: 2rem 0;
+}
+.mar-dw-2{
+  margin-bottom: 2rem;
+}
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.897);
+  margin: 0 16px 16px 0;
+  transition: .3s;
+}
+.aboutMe-section .card img{
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0% 19%;
+  transform: rotateY(180deg);
+}
+.card:hover{
+  transform: scale(1.009);
+  transition: .3s;
+}
+.border-radius{
+  border-radius: 6px;
+}
+.borderless{
+  border: none;
+}
+.button-secondary:hover {
+  background-color: #ff1964;
+  border: #ff1964 solid 1px;
+  transition: .3s;
+}
+.content {
+  padding: 1rem 1rem 0 0;
+  margin-bottom: 1rem;
+}
+
+.fab{
+  margin: 5px;
+  font-size: 1.5rem;
+  transition: .3s;
+  padding: 1rem;
+  padding-left: 0;
+}
+
+footer{
+  margin-bottom: 1.5rem !important;
+}
+.fab:hover{
+  color: #ff1964;
+  transition: .3s;
+}
+
+.form{
+  padding: 1rem;
+  margin-bottom: 2rem ;
+  
+}
+.contact{
+  padding-left: 12rem;
+}
+
+
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 560px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1020px) {
+  .container {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
