@@ -2,7 +2,7 @@
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on pushes targeting the default branch (ensure 'master' is your default branch)
   push:
     branches: ["master"]
 
@@ -38,9 +38,9 @@ jobs:
       # Add a build step if you're using a static site generator like Jekyll, Hugo, etc.
       - name: Build static site
         run: |
-          # Install dependencies (e.g., Jekyll)
+          # Example for Jekyll (adjust commands as needed for your generator)
           gem install jekyll bundler
-          # Build the site
+          bundle install
           bundle exec jekyll build
         # Set the correct build output path if necessary
         working-directory: './'
