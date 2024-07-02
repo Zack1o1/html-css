@@ -164,8 +164,8 @@ body {
 .mar-dw-0{
   margin-bottom: 0 !important;
 }
-.mar-tp-dw-10{
-  margin: 10rem 0;
+.margin-tp-dw{
+  margin: 5rem 0;
 }
 .mar-tp-dw-2{
   margin: 2rem 0;
@@ -229,7 +229,9 @@ footer{
 .contact{
   padding-left: 12rem;
 }
-
+.copyright p{
+    text-align: center;
+}
 
 
 @media (min-width: 640px) {
@@ -267,6 +269,10 @@ footer{
   .lg-w-40{
     width:40%;
   }
+  .margin-tp-dw{
+    margin: 10rem 0;
+  }
+ 
 }
 @media (min-width: 1280px) {
   .container {
