@@ -8,9 +8,6 @@ body {
 .bg{
   background-color:#060606;
 }
-.bg-secondary{
-  background-color: white;
-}
 .container {
   margin: 0 auto;
   width: 100%;
@@ -25,8 +22,11 @@ body {
   clear: both;
   display: table;
 }
+
 .site-navigation {
   text-align: right;
+  width: revert;
+  padding: 0 5rem 0 5rem;
 }
 .site-navigation ul{
   opacity: 0;
@@ -39,6 +39,7 @@ body {
   height: auto;
   pointer-events: initial;
 }
+
 .site-navigation li {
   display: inline-block;
   padding: 1.5rem 0;
@@ -48,49 +49,30 @@ body {
 }
 
 .site-header {
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   position: fixed;
   width: 100%;
   z-index: 10;
 }
 .hamburger-menu{
-  padding-top:1rem;
+  padding-left: 8.5rem;
 }
 .hamburger-menu span{
-  color:white;
+  color:#ff1964;
+  position: absolute;
+  top: 1rem;
+  right: .3rem;
 }
 
 .w-half {
   width: calc(100%/2);
-  padding:0 2rem;
-}
-.w-4{
-  width: calc(100%/4);
-  padding:0 2rem;
+  padding:0 1rem;
 }
 .w-100{
   width: 100%;
-  padding:0 2rem;
+  padding:1rem 1rem;
 }
-.w-40 {
-  width: 40%;
-  padding:0 2rem;
-}
-.w-60 {
-  width: calc(30*2%);
-  padding:0 2rem;
-}
-.w-30{
-  width: 30%;
-  padding:0 2rem;
-}
-.w-33{
-    width: calc(100%/3);
-    padding:0 2rem;
-}
-.h-1{
-  height: 300px;
-}
+
 .push-left {
   float: left;
 }
@@ -99,8 +81,8 @@ body {
   font-size: 1.5rem;
   display: inline-block;
 }
-.display-block{
-  display: block;
+.btn-w-100{
+  width: 100%;
 }
 .button-primary{
   background-color: #ff1964;
@@ -111,20 +93,21 @@ body {
     transition: .3s;
 }
 .hero-section{
-  padding-top:7rem;
+  padding: 7rem 1rem 0 1rem;
 }
 .hero-content p {
   margin-bottom: 2rem;
 }
 .hero-content h1 {
   font-size: 3.5rem;
+  padding-bottom: 1rem;
 }
 .hero-content span {
   font-size: 1.5rem;
 }
-
-
-
+.work-section,.aboutMe-section,.contact-section{
+  padding: 0 1rem;
+}
 
 .color-primary{
   color: white;
@@ -139,54 +122,25 @@ body {
   font-size: 3rem;
 }
 .section-header{
-  margin: 2rem 0;
-  padding: 2rem;
+  margin: 2rem 1rem;
 }
-.pad-1{
-  padding: 1rem;
+.section-sub-header{
+  margin-bottom: 2.5rem;
 }
 .pad-2{
   padding: 2rem;
 }
-.pad-half{
-  padding: .5rem;
+.mar-tp-2{
+  margin-top: 2rem;
 }
-.pad-2-half{
-  padding: 2.5rem;
-}
-.pad-lf-0{
-  padding-left: 0 !important;
-}
-.pad-dw-0{
-  padding-bottom: 0 !important;
-}
-.pad-tp-0{
-  padding-top: 0 !important;
-}
-.mar-rt-1{
-  margin-right: 1rem;
-}
-.mar-tp-2-half{
-  margin-top: 2.5rem;
-}
-.push-right{
-  text-align: end;
-}
-.mar-dw-0{
-  margin-bottom: 0 !important;
-}
+
 .margin-tp-dw{
   margin: 5rem 0;
 }
-.mar-tp-dw-2{
-  margin: 2rem 0;
-}
-.mar-dw-2{
-  margin-bottom: 2rem;
-}
+
 .card {
   border: 1px solid rgba(255, 255, 255, 0.897);
-  transition: .3s;
+  transition: .3s ease-in-out;
 }
 .aboutMe-section .card img{
   height: 400px;
@@ -211,30 +165,43 @@ body {
   transition: .3s;
 }
 .content {
-  padding: 1rem 1rem 0 0;
   margin-bottom: 1rem;
 }
 
 .fab{
-  margin: 5px;
   font-size: 1.5rem;
-  transition: .3s;
-  padding: 1rem;
-  padding-left: 0;
+  transition: .3s ease-in-out;
 }
 .fab:hover{
   color: #ff1964;
-  transition: .3s;
+  transition: .3s ease-in-out;
 }
-
+.contact i,.contact span{
+  padding: 1rem 1.5rem 1rem 0;
+  
+}
+.social-links a{
+  padding-right: .3rem;
+}
 .form-field{
-  padding: 1rem;
+  padding: 1rem 2px .5rem 0;
   margin-bottom: 2rem ;
   width:100%;
+  color: white;
+  background-color: #060606;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
 }
+.form-field:focus{
+  outline:  none;
+}
+
 .copyright-section{
   background-color: #ff1964;
   padding:1rem 0;
+}
+.copyright-section span{
+  padding: 2px;
 }
 .copyright-section p{
     text-align: center;
@@ -243,7 +210,9 @@ body {
 .display-hide{
   display:none;
 }
-
+.contact-address{
+  margin-left: 5px;
+}
 
 @media (min-width: 640px) {
   .container {
@@ -257,6 +226,9 @@ body {
   .md-w-half{
     width:50%;
   }
+  .site-navigation{
+    padding: revert;
+  }
 }
 @media (min-width: 1020px) {
   .container {
@@ -265,6 +237,7 @@ body {
   .site-navigation ul{
     opacity:1;
     height:auto;
+    pointer-events: initial;
   }
   .hamburger-menu{
     display:none;
@@ -282,17 +255,27 @@ body {
   }
   .lg-w-40{
     width:40%;
+    padding: 3.1rem 1rem;
+  }
+  .lg-w-60{
+    width: 60%;
+    padding: 0 1rem;
   }
   .margin-tp-dw{
     margin: 10rem 0;
   }
   .lg-w-33{
     width:calc(100%/3);
+    padding: 0 1rem;
   }
   .lg-w-half{
     width:50%;
+    padding: 0 1rem;
   }
- 
+  .contact-info{
+    padding-left: 10rem;
+  }
+
 }
 @media (min-width: 1280px) {
   .container {
