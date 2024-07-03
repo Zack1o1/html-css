@@ -14,10 +14,13 @@ body {
 .container {
   margin: 0 auto;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
-
-.clearfix::after {
+.row{
+  margin-left:-2rem;
+  margin-right:-2rem;
+}
+.row::after {
   content: "";
   clear: both;
   display: table;
@@ -59,24 +62,31 @@ body {
 
 .w-half {
   width: calc(100%/2);
+  padding:0 2rem;
 }
 .w-4{
   width: calc(100%/4);
+  padding:0 2rem;
 }
 .w-100{
   width: 100%;
+  padding:0 2rem;
 }
 .w-40 {
   width: 40%;
+  padding:0 2rem;
 }
 .w-60 {
   width: calc(30*2%);
+  padding:0 2rem;
 }
 .w-30{
   width: 30%;
+  padding:0 2rem;
 }
 .w-33{
     width: calc(100%/3);
+    padding:0 2rem;
 }
 .h-1{
   height: 300px;
@@ -130,6 +140,7 @@ body {
 }
 .section-header{
   margin: 2rem 0;
+  padding: 2rem;
 }
 .pad-1{
   padding: 1rem;
@@ -175,7 +186,6 @@ body {
 }
 .card {
   border: 1px solid rgba(255, 255, 255, 0.897);
-  margin: 0 16px 16px 0;
   transition: .3s;
 }
 .aboutMe-section .card img{
@@ -212,25 +222,26 @@ body {
   padding: 1rem;
   padding-left: 0;
 }
-
-footer{
-  margin-bottom: 1.5rem !important;
-}
 .fab:hover{
   color: #ff1964;
   transition: .3s;
 }
 
-.form{
+.form-field{
   padding: 1rem;
   margin-bottom: 2rem ;
-  
+  width:100%;
 }
-.contact{
-  padding-left: 12rem;
+.copyright-section{
+  background-color: #ff1964;
+  padding:1rem 0;
 }
-.copyright p{
+.copyright-section p{
     text-align: center;
+    color:white;
+}
+.display-hide{
+  display:none;
 }
 
 
@@ -242,6 +253,9 @@ footer{
 @media (min-width: 768px) {
   .container {
     max-width: 700px;
+  }
+  .md-w-half{
+    width:50%;
   }
 }
 @media (min-width: 1020px) {
@@ -272,10 +286,22 @@ footer{
   .margin-tp-dw{
     margin: 10rem 0;
   }
+  .lg-w-33{
+    width:calc(100%/3);
+  }
+  .lg-w-half{
+    width:50%;
+  }
  
 }
 @media (min-width: 1280px) {
   .container {
     max-width: 1200px;
+  }
+}
+
+@media (min-width:768px) and (max-width:1019px){
+  .md-display-show{
+    display:block;
   }
 }
