@@ -55,13 +55,13 @@ body {
   z-index: 10;
 }
 .hamburger-menu{
-  padding-left: 8.5rem;
+  padding-top: 1rem;
 }
 .hamburger-menu span{
   color:#ff1964;
   position: absolute;
   top: 1rem;
-  right: .3rem;
+  right: 2rem;
 }
 
 .w-half {
