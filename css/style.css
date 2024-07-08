@@ -22,28 +22,34 @@ body {
   clear: both;
   display: table;
 }
-
+.hero-section .container{
+  position: relative;
+}
 .site-navigation {
-  text-align: right;
-  width: revert;
-  padding: 0 5rem 0 5rem;
+  width: 50%;
+  padding:2rem;
 }
-.site-navigation ul{
-  opacity: 0;
-  height: 0px;
+.site-navigation.show{
+  position:absolute;
+  top:0;
+  right:0;
+  height:100vh;
+  background-color: #ff1964;
+}
+.site-navigation ul {
+  opacity:0;
   pointer-events: none;
-  transition:opacity 0.3s ease-in-out;
 }
-.site-navigation ul.show{
+.site-navigation.show ul {
   opacity: 1;
-  height: auto;
   pointer-events: initial;
 }
 
 .site-navigation li {
-  display: inline-block;
+  display: block;
   padding: 1.5rem 0;
 }
+
 .site-navigation li:not(:last-child) {
   margin-right: 1rem;
 }
@@ -54,14 +60,16 @@ body {
   width: 100%;
   z-index: 10;
 }
-.hamburger-menu{
+.hamburger-menu {
   padding-top: 1rem;
-}
-.hamburger-menu span{
-  color:#ff1964;
+  color: #ff1964;
   position: absolute;
   top: 1rem;
   right: 2rem;
+  transition: 0.3s ease-in-out;
+}
+.show .hamburger-menu{
+  color:white;
 }
 
 .w-half {
@@ -136,6 +144,29 @@ body {
 
 .margin-tp-dw{
   margin: 5rem 0;
+}
+.scroll-container{
+  position:absolute;
+  bottom: -3rem;
+  left:0;
+}
+.scroll-wrapper span{
+  position:relative;
+  animation: bounce 1s ease-in-out infinite both;
+}
+@keyframes bounce {
+  0%{
+    top:0rem;
+    color:white;
+  }
+  50%{
+    top:1rem;
+    color:#ff1964;
+  }
+  100%{
+    top:0rem;
+    color:white;
+  }
 }
 
 .card {
@@ -218,26 +249,35 @@ body {
   .container {
     max-width: 560px;
   }
+  
 }
 @media (min-width: 768px) {
   .container {
     max-width: 700px;
   }
+
   .md-w-half{
     width:50%;
   }
-  .site-navigation{
-    padding: revert;
-  }
+  
 }
 @media (min-width: 1020px) {
   .container {
     max-width: 900px;
   }
-  .site-navigation ul{
-    opacity:1;
-    height:auto;
+  .site-navigation{
+    padding: 0;
+    width:100%;
+    text-align:right;
+  }
+  .site-navigation ul {
+    opacity: 1;
+    height: auto;
     pointer-events: initial;
+    padding:0;
+  }
+  .site-navigation li{
+    display:inline-block;
   }
   .hamburger-menu{
     display:none;
