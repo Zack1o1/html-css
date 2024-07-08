@@ -315,7 +315,9 @@ body {
   .contact-info{
     padding-left: 10rem;
   }
-
+  .site-navigation.show{
+    display: contents;
+  }
 }
 @media (min-width: 1280px) {
   .container {
